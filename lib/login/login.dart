@@ -48,12 +48,12 @@ class _LogInPageState extends State<LogInPage> {
                   controller: _emailController,
                   decoration: const InputDecoration(
                     labelText: "Email",
-                    hintText: "Напиши свою почту",
+                    hintText: "login",
                     prefixIcon: Icon(Icons.mail),
                     // ignore: unnecessary_const
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: BorderSide(color: Colors.red, width: 2.0),
                     ),
                     // ignore: unnecessary_const
                     focusedBorder: OutlineInputBorder(
@@ -68,7 +68,7 @@ class _LogInPageState extends State<LogInPage> {
                   controller: _passwordController,
                   decoration: InputDecoration(
                     labelText: "Пароль",
-                    hintText: "Напиши свой пароль",
+                    hintText: "Password",
                     suffixIcon: IconButton(
                       icon:
                           // ignore: dead_code
@@ -83,12 +83,12 @@ class _LogInPageState extends State<LogInPage> {
                     prefixIcon: const Icon(Icons.security),
                     enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: BorderSide(color: Colors.purple, width: 2.0),
                     ),
                     // ignore: unnecessary_const
                     focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: BorderSide(color: Color.fromARGB(255, 194, 243, 33), width: 2.0),
                     ),
                   ),
                 ),
@@ -102,11 +102,11 @@ class _LogInPageState extends State<LogInPage> {
                     if (state is LoginSuccess) {
                       final snackBar = SnackBar(
                         content:  Container(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 100, 22, 22),
                           child: Text(
                                       "Вы авторизованы под токеном ${state.token.token}",
                                       style: TextStyle(
-                                        color: Colors.green,
+                                        color: const Color.fromARGB(255, 24, 125, 27),
                                         fontFamily: 'Inter',
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
@@ -157,7 +157,7 @@ class _LogInPageState extends State<LogInPage> {
                     }
                     return ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor: Color.fromARGB(255, 17, 145, 83),
                           fixedSize: Size(180, 50),
                         ),
                         onPressed: () async {
